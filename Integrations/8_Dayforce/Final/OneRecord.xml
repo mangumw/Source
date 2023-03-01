@@ -1,0 +1,27 @@
+</EmployeeImport>   
+   <Employee>
+        <XRefCode>118349</XRefCode>
+        <EmployeeNumber>118349</EmployeeNumber>
+        <FirstName>Luke</FirstName>
+        <LastName>Anderson</LastName>
+        <HireDate>2022-06-20</HireDate>
+        <OriginalHireDate>2011-11-01</OriginalHireDate>
+        <StartDate>2022-06-20</StartDate>
+        <SeniorityDate>2022-06-19</SeniorityDate>
+        <WorkAssignment>
+            <JobXrefCode5>LDCA</JobXrefCode5>
+            <DeptXrefCode6>STORE</DeptXrefCode6>
+            <OrgXrefCode7>0962</OrgXrefCode7>
+            <IsPrimary8>true</IsPrimary8>
+            <EffectiveStart9>2023-02-22</EffectiveStart9>
+        </WorkAssignment>
+        <Employment_Status>
+            <PayClassXrefCode>A2</PayClassXrefCode>
+            <PayTypeXrefCode>H</PayTypeXrefCode>
+            <EmploymentStatusXrefCode>A2</EmploymentStatusXrefCode>
+            <EffectiveStart21>2022-06-16</EffectiveStart21>
+            <BaseRateSalary>11.000000</BaseRateSalary>
+            <PayGroupXrefCode>Pay Group - Company 300 WEEKLY</PayGroupXrefCode>
+        </Employment_Status>
+    </Employee>
+</EmployeeImport>

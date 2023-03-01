@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>BAMBIG03</DataSourceReference>
+      <CommandText>select module as ActionAlley_Group_Code from reportdata.dbo.cardreportparameter_actionalley
+union all 
+select all_indicator from reference.dbo.all_indicators
+order by Module</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="ActionAlley_Group_Code">
+        <DataField>ActionAlley_Group_Code</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

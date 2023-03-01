@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>BAMBIG03</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@NR">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:UserDefined>true</rd:UserDefined>
+          <rd:DbType>String</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@D">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@SD">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@C">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@SC">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@SG">
+          <DefaultValue>=Parameters!SG.Value</DefaultValue>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:UserDefined>true</rd:UserDefined>
+          <rd:DbType>String</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="Sku_Type">
+          <DefaultValue>=Fields!Sku_Type.Value</DefaultValue>
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:UserDefined>true</rd:UserDefined>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@CG">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@PC">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@SrB">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@PG">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@Str">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@VIN">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@BN">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@AAM">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@S">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@AAC">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@P">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@SO">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@SJ">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@CON">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@feature">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+        <DataSetParameter Name="@ST">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+          <rd:IsMultiValued>true</rd:IsMultiValued>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>exec [reportdata].[dbo].[usp_rpt_999_report_bowker_status_TEST_CARD] 
+@NR,@D,@SD,@C,@SC,@SG,@CG,@PC,@SrB,@PG,@VIN,@AAC,@Str,@BN,@AAM,@S,@P,@SO,@feature,@SJ,@CON,@ST</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="ISBN">
+        <DataField>ISBN</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Sku_Number">
+        <DataField>Sku_Number</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Title">
+        <DataField>Title</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Pub_Code">
+        <DataField>Pub_Code</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Subject">
+        <DataField>Subject</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Author">
+        <DataField>Author</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Sr_Buyer">
+        <DataField>Sr_Buyer</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Buyer">
+        <DataField>Buyer</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Category">
+        <DataField>Category</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Dept">
+        <DataField>Dept</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="SDept_Name">
+        <DataField>SDept_Name</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Class_Name">
+        <DataField>Class_Name</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="SClass_Name">
+        <DataField>SClass_Name</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Sku_Type">
+        <DataField>Sku_Type</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Retail">
+        <DataField>Retail</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Disposition">
+        <DataField>Disposition</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="IDate">
+        <DataField>IDate</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="ExpReceiptDate">
+        <DataField>ExpReceiptDate</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Coordinate_Group">
+        <DataField>Coordinate_Group</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Module">
+        <DataField>Module</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="DWCost">
+        <DataField>DWCost</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Store_Min">
+        <DataField>Store_Min</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="BAM_OnHand">
+        <DataField>BAM_OnHand</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Warehouse_OnHand">
+        <DataField>Warehouse_OnHand</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Qty_OnOrder">
+        <DataField>Qty_OnOrder</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Qty_OnBackorder">
+        <DataField>Qty_OnBackorder</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="ReturnCenter_OnHand">
+        <DataField>ReturnCenter_OnHand</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="InTransit">
+        <DataField>InTransit</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Total_OnHand">
+        <DataField>Total_OnHand</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Week1Units">
+        <DataField>Week1Units</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Week1Dollars">
+        <DataField>Week1Dollars</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Week2Units">
+        <DataField>Week2Units</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Week2Dollars">
+        <DataField>Week2Dollars</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Week3Units">
+        <DataField>Week3Units</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Week3Dollars">
+        <DataField>Week3Dollars</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="TYYTDUnits">
+        <DataField>TYYTDUnits</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="TYYTDDollars">
+        <DataField>TYYTDDollars</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="LYYTDUnits">
+        <DataField>LYYTDUnits</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="LYYTDDollars">
+        <DataField>LYYTDDollars</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Week13Units">
+        <DataField>Week13Units</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Week13Dollars">
+        <DataField>Week13Dollars</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="WTD_Units">
+        <DataField>WTD_Units</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="WTD_Dollars">
+        <DataField>WTD_Dollars</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="bowkerstatus">
+        <DataField>bowkerstatus</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="Condition">
+        <DataField>Condition</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+      <Field Name="ST">
+        <DataField>ST</DataField>
+        <rd:UserDefined>true</rd:UserDefined>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

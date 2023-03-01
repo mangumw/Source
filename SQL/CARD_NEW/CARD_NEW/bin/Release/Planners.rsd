@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>BAMBIG03</DataSourceReference>
+      <CommandText>select distinct Planner from reference.dbo.Buyer_Planner_XREF
+union all
+select All_Indicator from reference.dbo.All_Indicators
+order by Planner</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="Planner">
+        <DataField>Planner</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

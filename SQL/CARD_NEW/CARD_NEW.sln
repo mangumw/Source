@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "CARD_NEW", "CARD_NEW\CARD_NEW.rptproj", "{2876D537-C706-4A9D-AE69-A1D9EB6FB144}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+		SSRS_Server|Default = SSRS_Server|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2876D537-C706-4A9D-AE69-A1D9EB6FB144}.Debug|Default.ActiveCfg = Debug
+		{2876D537-C706-4A9D-AE69-A1D9EB6FB144}.Debug|Default.Build.0 = Debug
+		{2876D537-C706-4A9D-AE69-A1D9EB6FB144}.Debug|Default.Deploy.0 = Debug
+		{2876D537-C706-4A9D-AE69-A1D9EB6FB144}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{2876D537-C706-4A9D-AE69-A1D9EB6FB144}.DebugLocal|Default.Build.0 = DebugLocal
+		{2876D537-C706-4A9D-AE69-A1D9EB6FB144}.Release|Default.ActiveCfg = Release
+		{2876D537-C706-4A9D-AE69-A1D9EB6FB144}.Release|Default.Build.0 = Release
+		{2876D537-C706-4A9D-AE69-A1D9EB6FB144}.Release|Default.Deploy.0 = Release
+		{2876D537-C706-4A9D-AE69-A1D9EB6FB144}.SSRS_Server|Default.ActiveCfg = Release
+		{2876D537-C706-4A9D-AE69-A1D9EB6FB144}.SSRS_Server|Default.Build.0 = Release
+		{2876D537-C706-4A9D-AE69-A1D9EB6FB144}.SSRS_Server|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D57B45C5-BB01-4A34-B306-00AC4BEDC2E5}
+	EndGlobalSection
+EndGlobal

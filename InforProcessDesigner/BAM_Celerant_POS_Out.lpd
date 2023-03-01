@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?><process autoRestart="0" className="FgProcess" connectionName="" designerVersion="9.1.0" generateMilestones="false" id="BAM_Celerant_POS_Out" priority="0" processType="false" schemaVersion="1.0" service="" title="">
+    <description/>
+    <processUserNode>
+        <from/>
+        <subject/>
+        <content/>
+        <displayType>1</displayType>
+        <displayContent/>
+        <displayName/>
+        <hideActions>false</hideActions>
+    </processUserNode>
+    <activities>
+        <activity activityType="START" caption="Start" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaStart" id="Start" x="30" y="30">
+            <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.Boolean" name="Checkpoint" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="String" name="vCurrentTime" propType="SIMPLE">
+                <anyData><![CDATA[DateString%28today%28%29%2C%27yyyymmdd+hhmmss%27%29.replace%28%22+%22%2C%22%22%29+%2B+%2200%22%0D%0A%0D%0A%2F%2Ftimestamp.getFormattedTimeZoneCurrentTimeStamp%28%27yyyyMMddHHmmsshh%2C%27America%2FChicago%27%29]]></anyData>
+            </prop>
+            <prop className="String" name="vFileName" propType="SIMPLE">
+                <anyData><![CDATA[%22%22%0D%0A%0D%0A%2F%2FCustomerName_PY_PayPeriodStart-PayPeriodEnd_yyyymmddhhmmss.csv]]></anyData>
+            </prop>
+            <prop className="String" name="vPayPeriodBegin" propType="SIMPLE">
+                <anyData><![CDATA[%22%22]]></anyData>
+            </prop>
+            <prop className="String" name="vPayPeriodEnd" propType="SIMPLE">
+                <anyData><![CDATA[%22%22]]></anyData>
+            </prop>
+            <prop className="String" name="vSender" propType="SIMPLE">
+                <anyData><![CDATA[_configuration.BAM_Celerant_POS_Outbound.InterfaceErrorFromEmail]]></anyData>
+            </prop>
+            <prop className="String" name="vRecipient" propType="SIMPLE">
+                <anyData><![CDATA[_configuration.BAM_Celerant_POS_Outbound.InterfaceErrorToEmail]]></anyData>
+            </prop>
+            <prop className="String" name="vEnvironment" propType="SIMPLE">
+                <anyData><![CDATA[appProdline.toLowerCase%28%29.indexOf%28%22prd%22%29+%3E+-1+%3F+%22%22+%3A+%22TEST_%22]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="variableType" propType="SIMPLE">
+                <anyData>NONE</anyData>
+            </prop>
+            <OnActivityError>
+                <notify>false</notify>
+                <to/>
+                <cc/>
+                <bcc/>
+                <from/>
+                <subject/>
+                <body/>
+                <goto>false</goto>
+                <activity/>
+                <log>false</log>
+                <logString/>
+                <emailCon/>
+            </OnActivityError>
+        </activity>
+        <activity activityType="END" caption="End" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaEnd" id="End" x="830" y="30">
+            <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.Boolean" name="Checkpoint" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="processStatus" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.String" name="variableType" propType="SIMPLE">
+                <anyData>NONE</anyData>
+            </prop>
+            <OnActivityError>
+                <notify>false</notify>
+                <to/>
+                <cc/>
+                <bcc/>
+                <from/>
+                <subject/>
+                <body/>
+                <goto>false</goto>
+                <activity/>
+                <log>false</log>
+                <logString/>
+                <emailCon/>
+            </OnActivityError>
+        </activity>
+        <activity activityType="ASSGN" caption="Assign" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaAssign" id="Assign2130" x="140" y="30">
+            <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.Boolean" name="Checkpoint" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="Object" name="" propType="SIMPLE">
+                <anyData><![CDATA[e+%3D+%22%22%3B%0D%0AvDeleteFlag+%3D+%2200000000-0000-0000-0000-000000000000%22%3B%0D%0AvNL+%3D+%22%5Cr%5Cn%22%3B%0D%0AvDelimiter+%3D+%22%7C%22%3B]]></anyData>
+            </prop>
+            <prop className="Object" name="" propType="SIMPLE">
+                <anyData><![CDATA[function+buildHeaderDict%28vFields%29%0D%0A%7B%0D%0A++tHead+%3D+%7B%7D%3B%0D%0A++for+%28var+j%3D0%3B+j+%3C+vFields.length%3B+j%2B%2B%29%0D%0A++%7B%0D%0A++++vFields%5Bj%5D+%3D+vFields%5Bj%5D.replace%28%2F%5C.%2Fg%2C%22_%22%29%0D%0A++++if+%28vFields%5Bj%5D+%21%3D+%22%22%29%0D%0A++++%7B%0D%0A++++++eval%28vFields%5Bj%5D+%2B+%22+%3D+%22+%2B+j%29%0D%0A++++%7D%0D%0A++++tHead%5Bj%5D+%3D+vFields%5Bj%5D.replace%28%2F%5C.%2Fg%2C%22_%22%29%0D%0A++%7D%0D%0A++return+false%0D%0A%7D]]></anyData>
+            </prop>
+            <prop className="Object" name="" propType="SIMPLE">
+                <anyData><![CDATA[function+buildBodyDict%28tDict%2CtKey%2CtOverride%29%0D%0A%7B%0D%0A++if+%28typeof+tOverride+%3D%3D%3D+%22undefined%22%29%0D%0A++%7B%0D%0A++++tOverride+%3D+false%0D%0A++%7D%0D%0A%0D%0A++if+%28tOverride+%21%3D+true%29%0D%0A++%7B%0D%0A++++tDict%5BvFields%5BtKey%5D%5D+%3D+%7B%7D%3B%0D%0A++%7D%0D%0A++for+%28var+j%3D0%3B+j+%3C+vFields.length%3B+j%2B%2B%29%0D%0A++%7B%0D%0A++++if+%28j+%21%3D+tKey%29%0D%0A++++%7B%0D%0A++++++tDict%5BvFields%5BtKey%5D%5D%5BtHead%5Bj%5D%5D+%3D+vFields%5Bj%5D%0D%0A++++%7D%0D%0A++%7D%0D%0A%7D]]></anyData>
+            </prop>
+            <prop className="Object" name="" propType="SIMPLE">
+                <anyData><![CDATA[function+buildWebDict%28tDict%2CtKey%29%0D%0A%7B%0D%0A%09for+%28fld+in+e%5Bi%5D%5B%22_fields%22%5D%29%0D%0A%09%7B%0D%0A%09%09tDict%5BtKey%5D%5Bfld%5D%3De%5Bi%5D%5B%22_fields%22%5D%5Bfld%5D%3B%0D%0A%09%7D%0D%0A%7D]]></anyData>
+            </prop>
+            <prop className="Object" name="" propType="SIMPLE">
+                <anyData><![CDATA[%2F%2FArrays%0D%0AvOutput+%3D+new+Array%28%29%3B]]></anyData>
+            </prop>
+            <prop className="Object" name="" propType="SIMPLE">
+                <anyData><![CDATA[%2F%2FJSON+Declarations%0D%0AvEmployeeDict+%3D+%7B%7D%3B]]></anyData>
+            </prop>
+            <prop className="Object" name="" propType="SIMPLE">
+                <anyData><![CDATA[%2F%2FWebCall+strings%0D%0A%0D%0Agrouproot+%3D+%27%2Fhcm%2Fsoap%2Fclasses%2FBusinessClassGroup%27%3B%0D%0A%0D%0Agroupfields+%3D++URLEncoder%28%27Condition%27%29%3B%0D%0A%0D%0Agroupfilter+%3D+URLEncoder%28%27BusinessClassGroup%3D%22BAM_CELERANT_EMPLOYEE%22%27%29%3B%0D%0A%0D%0Agroupdetails+%3D+%27%2Flists%2F_generic%3F_fields%3D%27+%2B+groupfields+%2B+%27%26_lplFilter%3D%27+%2B+groupfilter+%2B+%27%26_out%3DJSON%27%3B%0D%0A%0D%0AEmproot+%3D+%27%2Fhcm%2Fsoap%2Fclasses%2FEmployee%27%3B%0D%0A%0D%0AEmpfields+%3D++URLEncoder%28%27Name.GivenName%2CName.FamilyName%2CEmployee%2CPrimaryWorkAssignment.BAMCeleronUserGroup%2CEmployeeWorkEmailAddress%2CMailingAddressLine1%2CMailingAddressLine2%2CMailingMunicipality%2CMailingStateProvince%2CMailingPostalCode%2CPreferredNonWorkPhoneSubscriberNumber%2CStartDate%2CTerminationDate%2CPrimaryWorkAssignment.BAMCeleronStoreID%27%29%3B%0D%0A%0D%0AEmpfilter+%3D+%22REPLACEFILTER%22%3B%0D%0A%0D%0AEmpdetails+%3D+%27%2Flists%2F_generic%3F_fields%3D%27+%2B+Empfields+%2B+%27%26_lplFilter%3D%27+%2B+Empfilter+%2B+%27%26_out%3DJSON%27%3B]]></anyData>
+            </prop>
+            <OnActivityError>
+                <notify>false</notify>
+                <to/>
+                <cc/>
+                <bcc/>
+                <from/>
+                <subject/>
+                <body/>
+                <goto>false</goto>
+                <activity/>
+                <log>false</log>
+                <logString/>
+                <emailCon/>
+            </OnActivityError>
+        </activity>
+        <activity activityType="WEBRN" caption="GroupRec" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaCgiRun" id="GroupRec" x="259" y="30">
+            <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.Boolean" name="Checkpoint" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="configurationName" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.String" name="callTypeString" propType="SIMPLE">
+                <anyData><![CDATA[Lawson+HTTP+Call]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="headerString" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.String" name="callString" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.String" name="programName" propType="SIMPLE">
+                <anyData><![CDATA[%3C%21grouproot%3E%3C%21groupdetails%3E]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="contentType" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.String" name="method" propType="SIMPLE">
+                <anyData><![CDATA[GET]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="successStr" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.Boolean" name="stopOnError" propType="SIMPLE">
+                <anyData><![CDATA[true]]></anyData>
+            </prop>
+            <prop className="java.lang.Boolean" name="externalCall" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="java.lang.Boolean" name="externalHostSecured" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="externalCallHost" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.String" name="externalCallUser" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.String" name="externalCallPassword" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <OnActivityError>
+                <notify>true</notify>
+                <to><![CDATA[%3C%21_configuration.BAM_Walton_Interface.InterfaceErrorToEmail%3E]]></to>
+                <cc/>
+                <bcc/>
+                <from><![CDATA[%3C%21_configuration.BAM_Walton_Interface.InterfaceErrorFromEmail%3E]]></from>
+                <subject><![CDATA[Error+encountered+executing+process%3A+%3C%21ProcessName%3E+workunit%3A%3C%21WorkUnit%3E]]></subject>
+                <body><![CDATA[Error+encountered+executing+process%0D%0A%0D%0AProcess%3A+%3C%21ProcessName%3E%0D%0AWorkunit%3A+%3C%21WorkUnit%3E%0D%0AActivity+id%3A+%3C%21this%3E%0D%0A%0D%0AError+code%3A+%3C%21this_errorCode%3E%0D%0AInformation+code%3A+%3C%21this_informationCode%3E%0D%0A%0D%0AReturn+message%3A+%3C%21this_returnMessage%3E%0D%0A%0D%0AOutput+data%3A%0D%0A%3C%21this_outputData%3E%0D%0A%0D%0A]]></body>
+                <goto>false</goto>
+                <activity/>
+                <log>false</log>
+                <logString/>
+                <emailCon/>
+            </OnActivityError>
+        </activity>
+        <activity activityType="WEBRN" caption="Emp" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaCgiRun" id="Emp" x="424" y="30">
+            <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.Boolean" name="Checkpoint" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="configurationName" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.String" name="callTypeString" propType="SIMPLE">
+                <anyData><![CDATA[Lawson+HTTP+Call]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="headerString" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.String" name="callString" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.String" name="programName" propType="SIMPLE">
+                <anyData><![CDATA[%3C%21Emproot%3E%3C%21Empdetails%3E]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="contentType" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.String" name="method" propType="SIMPLE">
+                <anyData><![CDATA[GET]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="successStr" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.Boolean" name="stopOnError" propType="SIMPLE">
+                <anyData><![CDATA[true]]></anyData>
+            </prop>
+            <prop className="java.lang.Boolean" name="externalCall" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="java.lang.Boolean" name="externalHostSecured" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="externalCallHost" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.String" name="externalCallUser" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.String" name="externalCallPassword" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <OnActivityError>
+                <notify>true</notify>
+                <to><![CDATA[%3C%21_configuration.BAM_Walton_Interface.InterfaceErrorToEmail%3E]]></to>
+                <cc/>
+                <bcc/>
+                <from><![CDATA[%3C%21_configuration.BAM_Walton_Interface.InterfaceErrorFromEmail%3E]]></from>
+                <subject><![CDATA[Error+encountered+executing+process%3A+%3C%21ProcessName%3E+workunit%3A%3C%21WorkUnit%3E]]></subject>
+                <body><![CDATA[Error+encountered+executing+process%0D%0A%0D%0AProcess%3A+%3C%21ProcessName%3E%0D%0AWorkunit%3A+%3C%21WorkUnit%3E%0D%0AActivity+id%3A+%3C%21this%3E%0D%0A%0D%0AError+code%3A+%3C%21this_errorCode%3E%0D%0AInformation+code%3A+%3C%21this_informationCode%3E%0D%0A%0D%0AReturn+message%3A+%3C%21this_returnMessage%3E%0D%0A%0D%0AOutput+data%3A%0D%0A%3C%21this_outputData%3E%0D%0A%0D%0A]]></body>
+                <goto>false</goto>
+                <activity/>
+                <log>false</log>
+                <logString/>
+                <emailCon/>
+            </OnActivityError>
+        </activity>
+        <activity activityType="ASSGN" caption="Assign" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaAssign" id="Assign3700" x="422" y="185">
+            <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.Boolean" name="Checkpoint" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="Object" name="" propType="SIMPLE">
+                <anyData><![CDATA[e+%3D+JSON.parse%28Emp_result%29%3B%0D%0A%0D%0A%2F%2FLoop+through+Employee+results+%280+is+Page+Header%2C+1+starts+Data%29%0D%0A%0D%0A%0D%0Afor+%28i%3D1%3B+i+%3C+e.length%3B+i%2B%2B%29+%0D%0A%7B%0D%0A%09tEmp%3De%5Bi%5D%5B%22_fields%22%5D%5B%22Employee%22%5D%3B%0D%0A%09vEmployeeDict%5BtEmp%5D%3D%7B%7D%3B%0D%0A%09if+%28e%5Bi%5D%5B%22_fields%22%5D%5B%22TerminationDate%22%5D+%3D%3D+%2200000000%22%29%0D%0A%09%7Be%5Bi%5D%5B%22_fields%22%5D%5B%22TerminationDate%22%5D%3D%22%22%7D+%0D%0A%09buildWebDict%28vEmployeeDict%2CtEmp%29%3B%0D%0A%7D]]></anyData>
+            </prop>
+            <prop className="Object" name="" propType="SIMPLE">
+                <anyData><![CDATA[JSON.stringify%28vEmployeeDict%29%3B]]></anyData>
+            </prop>
+            <OnActivityError>
+                <notify>false</notify>
+                <to/>
+                <cc/>
+                <bcc/>
+                <from/>
+                <subject/>
+                <body/>
+                <goto>false</goto>
+                <activity/>
+                <log>false</log>
+                <logString/>
+                <emailCon/>
+            </OnActivityError>
+        </activity>
+        <activity activityType="ASSGN" caption="Assign" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaAssign" id="Assign5550" x="560" y="30">
+            <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.Boolean" name="Checkpoint" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="Object" name="" propType="SIMPLE">
+                <anyData><![CDATA[for+%28tEmp+in+vEmployeeDict%29%0D%0A%7B%0D%0A%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22Name.GivenName%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+First+Name%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22Name.FamilyName%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+Last+Name%09%09%09%09%09%09%09%0D%0A%09%09vOutput.push%28tEmp+%2B+vDelimiter%29%3B+%2F%2FLogin%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22PrimaryWorkAssignment.BAMCeleronUserGroup%22%5D+%2B+vDelimiter%29%3B+%2F%2FUser+Group%09%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22EmployeeWorkEmailAddress%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+Last+Name%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22MailingAddressLine1%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+Address%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22MailingAddressLine2%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+Address+2%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22MailingMunicipality%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+City%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22MailingStateProvince%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+State%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22MailingPostalCode%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+Zip%0D%0A%09%09vOutput.push%28%22USA%22+%2B+vDelimiter%29%3B+%2F%2FCountry%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22PreferredNonWorkPhoneSubscriberNumber%22%5D+%2B+vDelimiter%29%3B+%2F%2FPhone+Number%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22StartDate%22%5D+%2B+vDelimiter%29%3B+%2F%2FStart+Date%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22TerminationDate%22%5D+%2B+vDelimiter%29%3B+%2F%2FTerm+Date%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22PrimaryWorkAssignment.BAMCeleronStoreID%22%5D+%2B+vNL%29%3B+%2F%2FStore+ID%0D%0A%0D%0A%0D%0A%7D]]></anyData>
+            </prop>
+            <OnActivityError>
+                <notify>false</notify>
+                <to/>
+                <cc/>
+                <bcc/>
+                <from/>
+                <subject/>
+                <body/>
+                <goto>false</goto>
+                <activity/>
+                <log>false</log>
+                <logString/>
+                <emailCon/>
+            </OnActivityError>
+        </activity>
+        <activity activityType="ACCFIL" caption="WriteFile" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaFileAccess" id="WriteFile" x="553" y="185">
+            <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.Boolean" name="Checkpoint" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="function" propType="SIMPLE">
+                <anyData><![CDATA[write]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="encoding" propType="SIMPLE">
+                <anyData><![CDATA[windows-1252]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="dataSource" propType="SIMPLE">
+                <anyData><![CDATA[First_Name%7CLast_Name%7CLogin%7CUser_Group%7CEmail%7CAddress1%7CAddress2%7CCity%7CState%7CZip%7CCountry%7CPhone%7CDate_Hired%7CDate_Terminated%7CStore_Id%0D%0A%3C%21vOutput.join%28%22%22%29%3E]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="filePathName" propType="SIMPLE">
+                <anyData><![CDATA[BAM_%3C%21vEnvironment%3ECelerant_%3C%21vCurrentTime%3E.csv]]></anyData>
+            </prop>
+            <prop className="java.lang.Boolean" name="stopOnError" propType="SIMPLE">
+                <anyData><![CDATA[true]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="configurationName" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.Boolean" name="ignore file not found" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <OnActivityError>
+                <notify>true</notify>
+                <to><![CDATA[%3C%21_configuration.BAM_Walton_Interface.InterfaceErrorFromEmail%3E]]></to>
+                <cc/>
+                <bcc/>
+                <from><![CDATA[%3C%21_configuration.BAM_Walton_Interface.InterfaceErrorToEmail%3E]]></from>
+                <subject><![CDATA[Error+encountered+executing+process%3A+%3C%21ProcessName%3E+workunit%3A%3C%21WorkUnit%3E]]></subject>
+                <body><![CDATA[Error+encountered+executing+process%0D%0A%0D%0AProcess%3A+%3C%21ProcessName%3E%0D%0AWorkunit%3A+%3C%21WorkUnit%3E%0D%0AActivity+id%3A+%3C%21this%3E%0D%0A%0D%0AError+code%3A+%3C%21this_errorCode%3E%0D%0AInformation+code%3A+%3C%21this_informationCode%3E%0D%0A%0D%0AReturn+message%3A+%3C%21this_returnMessage%3E%0D%0A%0D%0AOutput+data%3A%0D%0A%3C%21this_outputData%3E%0D%0A%0D%0A]]></body>
+                <goto>false</goto>
+                <activity/>
+                <log>false</log>
+                <logString/>
+                <emailCon/>
+            </OnActivityError>
+        </activity>
+        <activity activityType="FileTransfer" caption="FTP" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaFtp" id="FTP2410" x="695" y="30">
+            <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.Boolean" name="Checkpoint" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="sourceConfigurationName" propType="SIMPLE">
+                <anyData><![CDATA[BAM_Celerant_POS_Outbound]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="targetConfigurationName" propType="SIMPLE">
+                <anyData><![CDATA[BAM_Celerant_POS_Outbound]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="SourceFile" propType="SIMPLE">
+                <anyData><![CDATA[BAM_%3C%21vEnvironment%3ECelerant_%3C%21vCurrentTime%3E.csv]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="TargetFile" propType="SIMPLE">
+                <anyData><![CDATA[%3C%21_configuration.BAM_Celerant_POS_Outbound.FTPDirectory%3EBAM_%3C%21vEnvironment%3ECelerant_%3C%21vCurrentTime%3E.csv]]></anyData>
+            </prop>
+            <prop className="java.lang.Boolean" name="stopOnError" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="java.lang.Boolean" name="RemoteSource" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="java.lang.Boolean" name="RemoteTarget" propType="SIMPLE">
+                <anyData><![CDATA[true]]></anyData>
+            </prop>
+            <prop className="java.lang.Boolean" name="IgnoreCase" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="transfermode" propType="SIMPLE">
+                <anyData><![CDATA[Bin]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="executionMode" propType="SIMPLE">
+                <anyData><![CDATA[0]]></anyData>
+            </prop>
+            <OnActivityError>
+                <notify>true</notify>
+                <to><![CDATA[%3C%21vSender%3E]]></to>
+                <cc/>
+                <bcc/>
+                <from><![CDATA[%3C%21vRecipient%3E]]></from>
+                <subject><![CDATA[Error+encountered+executing+process%3A+BAM_ThomasAndCo+workunit%3A%3C%21WorkUnit%3E]]></subject>
+                <body><![CDATA[Error+encountered+executing+process%0D%0A%0D%0AProcess%3A+BAM_ThomasAndCo%0D%0AWorkunit%3A+%3C%21WorkUnit%3E%0D%0AActivity+id%3A+%3C%21this%3E%0D%0A%0D%0AError+code%3A+%3C%21this_errorCode%3E%0D%0AInformation+code%3A+%3C%21this_informationCode%3E%0D%0A%0D%0AReturn+message%3A+%3C%21this_returnMessage%3E%0D%0A%0D%0AOutput+data%3A%0D%0A%3C%21this_outputData%3E%0D%0A%0D%0A]]></body>
+                <goto>false</goto>
+                <activity/>
+                <log>false</log>
+                <logString/>
+                <emailCon/>
+            </OnActivityError>
+        </activity>
+        <activity activityType="ASSGN" caption="Assign" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaAssign" id="Assign7960" x="271" y="185">
+            <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.Boolean" name="Checkpoint" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="Object" name="" propType="SIMPLE">
+                <anyData><![CDATA[e+%3D+JSON.parse%28GroupRec_result%29%3B%0D%0A%0D%0A%2F%2FLoop+through+Employee+results+%280+is+Page+Header%2C+1+starts+Data%29%0D%0A%0D%0A%0D%0AEmpfilter+%3D+URLEncoder%28e%5B1%5D%5B%22_fields%22%5D%5B%22Condition%22%5D%29%3B%0D%0A%0D%0AEmpdetails+%3D+Empdetails.replace%28%22REPLACEFILTER%22%2CEmpfilter%29%3B]]></anyData>
+            </prop>
+            <prop className="Object" name="" propType="SIMPLE">
+                <anyData><![CDATA[processlog.info%28GroupRec_result%29%3B]]></anyData>
+            </prop>
+            <OnActivityError>
+                <notify>false</notify>
+                <to/>
+                <cc/>
+                <bcc/>
+                <from/>
+                <subject/>
+                <body/>
+                <goto>false</goto>
+                <activity/>
+                <log>false</log>
+                <logString/>
+                <emailCon/>
+            </OnActivityError>
+        </activity>
+    </activities>
+    <edges>
+        <edge edgeType="NORMAL" from="Start" id="0" to="Assign2130"/>
+        <edge edgeType="NORMAL" from="Assign2130" id="1" to="GroupRec"/>
+        <edge edgeType="NORMAL" from="Emp" id="2" to="Assign3700"/>
+        <edge edgeType="NORMAL" from="Assign5550" id="3" to="WriteFile"/>
+        <edge edgeType="NORMAL" from="FTP2410" id="4" to="End"/>
+        <edge edgeType="NORMAL" from="GroupRec" id="5" to="Assign7960"/>
+        <edge edgeType="NORMAL" from="Assign7960" id="6" to="Emp"/>
+        <edge edgeType="NORMAL" from="Assign3700" id="7" to="Assign5550"/>
+        <edge edgeType="NORMAL" from="WriteFile" id="8" to="FTP2410"/>
+    </edges>
+</process>

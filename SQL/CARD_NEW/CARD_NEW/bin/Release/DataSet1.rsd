@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>BAMBIG03</DataSourceReference>
+      <CommandText>select staging.dbo.fn_last_saturday(getdate()) as Week1,
+dateadd(ww,-1,staging.dbo.fn_last_saturday(getdate())) as Week2,
+dateadd(ww,-2,staging.dbo.fn_last_saturday(getdate())) as Week3</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="Week1">
+        <DataField>Week1</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="Week2">
+        <DataField>Week2</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="Week3">
+        <DataField>Week3</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

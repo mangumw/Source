@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="BAMBIG03">
+      <rd:DataSourceID>161b363a-ab0c-4848-8f48-ca7deb0f855e</rd:DataSourceID>
+      <DataSourceReference>BAMBIG03</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <rd:ReportID>79314fb5-30f9-49ee-9f09-170901214ab4</rd:ReportID>
+  <Width>5in</Width>
+  <Body>
+    <Height>0.43in</Height>
+    <ColumnSpacing>0.5in</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="textbox1">
+        <Style>
+          <FontFamily>Segoe UI Light</FontFamily>
+          <FontSize>24pt</FontSize>
+          <FontWeight>Bold</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Value>CARD_2</Value>
+        <CanGrow>true</CanGrow>
+        <Height>0.43in</Height>
+      </Textbox>
+      <Table Name="table1">
+        <Top>0.43in</Top>
+        <Style />
+        <Header>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+          <TableRows>
+            <TableRow>
+              <TableCells />
+              <Height>0in</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells />
+              <Height>0in</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <TableColumns />
+        <DataSetName>DataSet1</DataSetName>
+      </Table>
+    </ReportItems>
+  </Body>
+  <Language>en-US</Language>
+  <LeftMargin>1in</LeftMargin>
+  <RightMargin>1in</RightMargin>
+  <TopMargin>1in</TopMargin>
+  <BottomMargin>1in</BottomMargin>
+  <PageWidth>8.5in</PageWidth>
+  <PageHeight>11in</PageHeight>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Fields />
+      <Query>
+        <DataSourceName>BAMBIG03</DataSourceName>
+        <CommandType>Text</CommandType>
+        <CommandText>EXEC [dbo].[usp_rpt_999_report_bowker_status]
+@NR,@D,@SD,@C,@SC,@SG,@CG,@PC,@SrB,@PG,@VIN,@AAC,@Str,@BN,@AAM,@S,@P,@SO,@feature,@SJ,@CON</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+        <QueryParameters>
+          <QueryParameter Name="@NR">
+            <Value>=Parameters!NR.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@D">
+            <Value>=Parameters!D.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SD">
+            <Value>=Parameters!SD.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@C">
+            <Value>=Parameters!C.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SC">
+            <Value>=Parameters!SC.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SG">
+            <Value>=Parameters!SG.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@CG">
+            <Value>=Parameters!CG.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@PC">
+            <Value>=Parameters!PC.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SrB">
+            <Value>=Parameters!SrB.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@PG">
+            <Value>=Parameters!PG.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@VIN">
+            <Value>=Parameters!VIN.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@AAC">
+            <Value>=Parameters!AAC.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@Str">
+            <Value>=Parameters!Str.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@BN">
+            <Value>=Parameters!BN.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@AAM">
+            <Value>=Parameters!AAM.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@S">
+            <Value>=Parameters!S.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@P">
+            <Value>=Parameters!P.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SO">
+            <Value>=Parameters!SO.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@feature">
+            <Value>=Parameters!feature.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@SJ">
+            <Value>=Parameters!SJ.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@CON">
+            <Value>=Parameters!CON.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <Timeout>0</Timeout>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="NR">
+      <DataType>String</DataType>
+      <Prompt>NR</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="D">
+      <DataType>String</DataType>
+      <Prompt>D</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SD">
+      <DataType>String</DataType>
+      <Prompt>SD</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="C">
+      <DataType>String</DataType>
+      <Prompt>C</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SC">
+      <DataType>String</DataType>
+      <Prompt>SC</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SG">
+      <DataType>String</DataType>
+      <Prompt>SG</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CG">
+      <DataType>String</DataType>
+      <Prompt>CG</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PC">
+      <DataType>String</DataType>
+      <Prompt>PC</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SrB">
+      <DataType>String</DataType>
+      <Prompt>Sr B</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PG">
+      <DataType>String</DataType>
+      <Prompt>PG</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="VIN">
+      <DataType>String</DataType>
+      <Prompt>VIN</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AAC">
+      <DataType>String</DataType>
+      <Prompt>AAC</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Str">
+      <DataType>String</DataType>
+      <Prompt>Str</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="BN">
+      <DataType>String</DataType>
+      <Prompt>BN</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AAM">
+      <DataType>String</DataType>
+      <Prompt>AAM</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="S">
+      <DataType>String</DataType>
+      <Prompt>S</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="P">
+      <DataType>String</DataType>
+      <Prompt>P</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SO">
+      <DataType>String</DataType>
+      <Prompt>SO</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="feature">
+      <DataType>String</DataType>
+      <Prompt>feature</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="SJ">
+      <DataType>String</DataType>
+      <Prompt>SJ</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CON">
+      <DataType>String</DataType>
+      <Prompt>CON</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+</Report>

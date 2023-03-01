@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>BAMBIG03</DataSourceReference>
+      <CommandText>select cast(VIN as varchar(20)) as VIN from ReportData.dbo.CardReportParameter_VIN 
+union all
+select all_indicator from reference.dbo.all_indicators
+order by VIN</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="VIN">
+        <DataField>VIN</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

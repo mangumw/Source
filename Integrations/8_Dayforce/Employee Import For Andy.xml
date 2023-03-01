@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<EmployeeImport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Employee>
+		<XRefCode>160735</XRefCode>
+		<EmployeeNumber>160735</EmployeeNumber>
+		<FirstName>Wardencki</FirstName>
+		<LastName>Andy</LastName>
+		<Gender>M</Gender>
+		<HireDate>2022-06-06</HireDate>
+		<OriginalHireDate>2022-06-06</OriginalHireDate>
+		<StartDate>2022-06-06</StartDate>
+		<SeniorityDate>2022-06-06</SeniorityDate>
+		<WorkAssignment>
+			<JobXrefCode>Manager</JobXrefCode>
+			<DeptXrefCode>STORE</DeptXrefCode>
+			<OrgXrefCode>0393</OrgXrefCode>
+			<IsPrimary>true</IsPrimary>
+			<EffectiveStart>2022-06-06</EffectiveStart>
+			<FTE>1</FTE>
+		</WorkAssignment>
+		<EmploymentStatus>
+			<PayClassXrefCode>A1</PayClassXrefCode>
+			<PayTypeXrefCode>H</PayTypeXrefCode>
+			<PayStatusXrefCode>A1</PayStatusXrefCode>
+			<EmploymentStatusXrefCode>A1</EmploymentStatusXrefCode>
+			<EffectiveStart>2022-06-06</EffectiveStart>
+			<BaseRateSalary>13.39</BaseRateSalary>
+			<PayGroupXrefCode>Pay Group - Company 300 WEEKLY</PayGroupXrefCode>
+		</EmploymentStatus>
+		<AddressInformation>
+			<ContactInformationTypeXrefCode>PrimaryResidence</ContactInformationTypeXrefCode>
+			<EffectiveStart/>
+			<Address1/>
+			<City/>
+			<StateCode xsi:nil="true"/>
+			<CountryCode xsi:nil="true"/>
+			<PostalCode/>
+		</AddressInformation>
+	</Employee>
+</EmployeeImport>
