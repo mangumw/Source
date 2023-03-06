@@ -2,10 +2,10 @@ WOTC CustID|LocCode|LocName|Loc_Address1|Loc_Address2|Loc_City|Loc_State|Loc_Zip
 7763|0001|Books-A-Million Corp|402 Industrial Lane||Birmingham|AL|35211|
 7765|0002|AWBC Florence|4350 Bryson Blvd||Florence|AL|35630|
 7765|0003|AWBC BHAM|402 Industrial Lane||Birmingham|AL|35211|
-0|0004|Nashville|1897 General George Patton Dr|Ste. 106|Franklin|TN|37067|
-0|0005|American Internet Services|402 Industrial Lane||Birmingham|AL|35211|
-0|0006|Book Smart|602 John Aldridge Avenue||Tuscumbia|AL|35674|
-0|0007|CORP Irondale|131 25th Street South||Irondale|AL|35210|
+9999|0004|Nashville|1897 General George Patton Dr|Ste. 106|Franklin|TN|37067|
+9999|0005|American Internet Services|402 Industrial Lane||Birmingham|AL|35211|
+9999|0006|Book Smart|602 John Aldridge Avenue||Tuscumbia|AL|35674|
+9999|0007|CORP Irondale|131 25th Street South||Irondale|AL|35210|
 7766|0010|Yogurt Mountain Home Office|402 Industrial Lane||Birmingham|AL|35211|
 7763|0105|105 Abilene, TX BAM|4310 Buffalo Gap Road, #3500||Abilene|TX|79606|
 7763|0106|106 Acworth, GA BAM|3372 North Cobb Parkway, Suite||Acworth|GA|30101|
