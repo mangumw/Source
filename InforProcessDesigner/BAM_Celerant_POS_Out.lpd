@@ -255,7 +255,7 @@
                 <emailCon/>
             </OnActivityError>
         </activity>
-        <activity activityType="ASSGN" caption="Assign" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaAssign" id="Assign3700" x="422" y="185">
+        <activity activityType="ASSGN" caption="Assign" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaAssign" id="Assign3700" x="424" y="185">
             <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
                 <anyData/>
             </prop>
@@ -308,7 +308,7 @@
                 <emailCon/>
             </OnActivityError>
         </activity>
-        <activity activityType="ACCFIL" caption="WriteFile" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaFileAccess" id="WriteFile" x="553" y="185">
+        <activity activityType="ACCFIL" caption="WriteFile" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaFileAccess" id="WriteFile" x="560" y="185">
             <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
                 <anyData/>
             </prop>
@@ -403,7 +403,7 @@
                 <emailCon/>
             </OnActivityError>
         </activity>
-        <activity activityType="ASSGN" caption="Assign" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaAssign" id="Assign7960" x="271" y="185">
+        <activity activityType="ASSGN" caption="Assign" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaAssign" id="Assign7960" x="260" y="185">
             <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
                 <anyData/>
             </prop>

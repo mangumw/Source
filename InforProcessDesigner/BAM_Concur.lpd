@@ -30,10 +30,10 @@
                 <anyData><![CDATA[%22%22]]></anyData>
             </prop>
             <prop className="String" name="vSender" propType="SIMPLE">
-                <anyData><![CDATA[_configuration.BAM_Concur_Interface.InterfaceErrorFromEmail]]></anyData>
+                <anyData><![CDATA[_configuration.BAM_Concur.InterfaceErrorFromEmail]]></anyData>
             </prop>
             <prop className="String" name="vRecipient" propType="SIMPLE">
-                <anyData><![CDATA[_configuration.BAM_Concur_Interface.InterfaceErrorToEmail]]></anyData>
+                <anyData><![CDATA[_configuration.BAM_Concur.InterfaceErrorToEmail]]></anyData>
             </prop>
             <prop className="String" name="vEnvironment" propType="SIMPLE">
                 <anyData><![CDATA[appProdline.toLowerCase%28%29.indexOf%28%22prd%22%29+%3E+-1+%3F+%22%22+%3A+%22TEST_%22]]></anyData>
@@ -110,7 +110,7 @@
                 <anyData><![CDATA[%2F%2FJSON+Declarations%0D%0AvEmployeeDict+%3D+%7B%7D%3B]]></anyData>
             </prop>
             <prop className="Object" name="" propType="SIMPLE">
-                <anyData><![CDATA[%2F%2FWebCall+strings%0D%0Agrouproot+%3D+%27%2Fhcm%2Fsoap%2Fclasses%2FBusinessClassGroup%27%3B%0D%0A%0D%0Agroupfields+%3D++URLEncoder%28%27Condition%27%29%3B%0D%0A%0D%0Agroupfilter+%3D+URLEncoder%28%27BusinessClassGroup%3D%22BAM_ACTIVE_EMPLOYEES%22%27%29%3B%0D%0A%0D%0Agroupdetails+%3D+%27%2Flists%2F_generic%3F_fields%3D%27+%2B+groupfields+%2B+%27%26_lplFilter%3D%27+%2B+groupfilter+%2B+%27%26_out%3DJSON%27%3B%0D%0A%0D%0Awaroot+%3D+%27%2Fhcm%2Fsoap%2Fclasses%2FWorkAssignment%27%3B%0D%0A%0D%0Awafields+%3D++URLEncoder%28%27ExpenseAccount.ToAccountingEntity%2CEmployee.Employee%2CEmployee.Name.GivenName%2CEmployee.Name.MiddleInitial%2CEmployee.Name.FamilyName%2CEmployee.WorkType%2CBAMProcessLevel%2CBAMCeleronStoreID%2CExpenseAccount.ToAccountingEntity%2CExpenseAccount.FinanceDimension1%2CExpenseAccount.GeneralLedgerChartAccount%2CJob%2CDirectSupervisor%2CEmployee.EmployeeWorkEmailAddress%2CPosition%2CEmployee.BAMWeekEndDate%2CLocation%2CBAMRelationshipStatus%2CEmployee.BAMIsManagerCamelCase%2CEmployee.DirectSupervisorEmployee%2CEmployee.BAMLoginID%2CBAMStoreOrMain%27%29%3B%0D%0A%0D%0Awafilter+%3D+%22REPLACEFILTER%22%3B%0D%0A%0D%0Awadetails+%3D+%27%2Flists%2F_generic%3F_fields%3D%27+%2B+wafields+%2B+%27%26_lplFilter%3D%27+%2B+wafilter+%2B+%27%26_out%3DJSON%27%3B]]></anyData>
+                <anyData><![CDATA[%2F%2FWebCall+strings%0D%0Agrouproot+%3D+%27%2Fhcm%2Fsoap%2Fclasses%2FBusinessClassGroup%27%3B%0D%0A%0D%0Agroupfields+%3D++URLEncoder%28%27Condition%27%29%3B%0D%0A%0D%0Agroupfilter+%3D+URLEncoder%28%27BusinessClassGroup%3D%22BAM_ACTIVE_EMPLOYEES%22%27%29%3B%0D%0A%0D%0Agroupdetails+%3D+%27%2Flists%2F_generic%3F_fields%3D%27+%2B+groupfields+%2B+%27%26_lplFilter%3D%27+%2B+groupfilter+%2B+%27%26_out%3DJSON%27%3B%0D%0A%0D%0AEmproot+%3D+%27%2Fhcm%2Fsoap%2Fclasses%2FEmployee%27%3B%0D%0A%0D%0AEmpfields+%3D++URLEncoder%28%27Employee%2CName.GivenName%2CName.MiddleInitial%2CName.FamilyName%2CBAMLoginID%2CEmployeeContact.ContactDetail.EmailAddress%2CPrimaryWorkAssignment.PayRateCurrency%2CBAMRelationshipStatus%2CPrimaryWorkAssignment.ExpenseAccount.ToAccountingEntity%2CPrimaryWorkAssignment.Location%2CBAMWeekEndDate%2CPrimaryWorkAssignment.BAMStoreOrMain%2CBAMIsManagerCamelCase%2CPrimaryWorkAssignment.DirectSupervisorEmployee%27%29%3B%0D%0A%0D%0AEmpfilter+%3D+%22REPLACEFILTER%22%3B%0D%0A%0D%0AEmpdetails+%3D+%27%2Flists%2F_generic%3F_fields%3D%27+%2B+Empfields+%2B+%27%26_lplFilter%3D%27+%2B+Empfilter+%2B+%27%26_out%3DJSON%27%3B]]></anyData>
             </prop>
             <OnActivityError>
                 <notify>false</notify>
@@ -127,7 +127,7 @@
                 <emailCon/>
             </OnActivityError>
         </activity>
-        <activity activityType="WEBRN" caption="eGroup" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaCgiRun" id="eGroup" x="248" y="30">
+        <activity activityType="WEBRN" caption="eGroup" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaCgiRun" id="eGroup" x="260" y="30">
             <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
                 <anyData/>
             </prop>
@@ -191,7 +191,7 @@
                 <emailCon/>
             </OnActivityError>
         </activity>
-        <activity activityType="ASSGN" caption="Assign" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaAssign" id="Assign7500" x="251" y="185">
+        <activity activityType="ASSGN" caption="Assign" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaAssign" id="Assign7500" x="260" y="200">
             <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
                 <anyData/>
             </prop>
@@ -199,7 +199,7 @@
                 <anyData><![CDATA[false]]></anyData>
             </prop>
             <prop className="Object" name="" propType="SIMPLE">
-                <anyData><![CDATA[e+%3D+JSON.parse%28eGroup_result%29%3B%0D%0A%0D%0A%2F%2FLoop+through+Employee+results+%280+is+Page+Header%2C+1+starts+Data%29%0D%0A%0D%0Awafilter+%3D+URLEncoder%28e%5B1%5D%5B%22_fields%22%5D%5B%22Condition%22%5D%29%3B%0D%0A%0D%0Awadetails+%3D+wadetails.replace%28%22REPLACEFILTER%22%2Cwafilter%29%3B]]></anyData>
+                <anyData><![CDATA[e+%3D+JSON.parse%28eGroup_result%29%3B%0D%0A%0D%0A%2F%2FLoop+through+Employee+results+%280+is+Page+Header%2C+1+starts+Data%29%0D%0A%0D%0AEmpfilter+%3D+URLEncoder%28e%5B1%5D%5B%22_fields%22%5D%5B%22Condition%22%5D%29%3B%0D%0A%0D%0AEmpdetails+%3D+Empdetails.replace%28%22REPLACEFILTER%22%2CEmpfilter%29%3B]]></anyData>
             </prop>
             <prop className="Object" name="" propType="SIMPLE">
                 <anyData><![CDATA[processlog.info%28eGroup_result%29%3B]]></anyData>
@@ -219,7 +219,7 @@
                 <emailCon/>
             </OnActivityError>
         </activity>
-        <activity activityType="WEBRN" caption="eWA" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaCgiRun" id="eWA" x="395" y="30">
+        <activity activityType="WEBRN" caption="Emp" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaCgiRun" id="Emp" x="395" y="30">
             <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
                 <anyData/>
             </prop>
@@ -239,7 +239,7 @@
                 <anyData/>
             </prop>
             <prop className="java.lang.String" name="programName" propType="SIMPLE">
-                <anyData><![CDATA[%3C%21waroot%3E%3C%21wadetails%3E]]></anyData>
+                <anyData><![CDATA[%3C%21Emproot%3E%3C%21Empdetails%3E]]></anyData>
             </prop>
             <prop className="java.lang.String" name="contentType" propType="SIMPLE">
                 <anyData/>
@@ -283,7 +283,7 @@
                 <emailCon/>
             </OnActivityError>
         </activity>
-        <activity activityType="ASSGN" caption="Assign" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaAssign" id="Assign3700" x="393" y="185">
+        <activity activityType="ASSGN" caption="Assign" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaAssign" id="Assign3700" x="395" y="200">
             <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
                 <anyData/>
             </prop>
@@ -291,13 +291,10 @@
                 <anyData><![CDATA[false]]></anyData>
             </prop>
             <prop className="Object" name="" propType="SIMPLE">
-                <anyData><![CDATA[e+%3D+JSON.parse%28eWA_result%29%3B%0D%0A%0D%0A%2F%2FLoop+through+Employee+results+%280+is+Page+Header%2C+1+starts+Data%29%0D%0A%0D%0Afor+%28i%3D1%3B+i+%3C+e.length%3B+i%2B%2B%29+%0D%0A%7B%0D%0A%09tEmp%3De%5Bi%5D%5B%22_fields%22%5D%5B%22Employee%22%5D%3B%0D%0A%09vEmployeeDict%5BtEmp%5D%3D%7B%7D%3B%0D%0A%09if+%28e%5Bi%5D%5B%22_fields%22%5D%5B%22TerminationDate%22%5D+%3D%3D+%2200000000%22%29%0D%0A%09%7Be%5Bi%5D%5B%22_fields%22%5D%5B%22TerminationDate%22%5D%3D%22%22%7D+%0D%0A%09buildWebDict%28vEmployeeDict%2CtEmp%29%3B%0D%0A%7D]]></anyData>
+                <anyData><![CDATA[e+%3D+JSON.parse%28Emp_result%29%3B%0D%0A%0D%0A%2F%2FLoop+through+Employee+results+%280+is+Page+Header%2C+1+starts+Data%29%0D%0A%0D%0A%0D%0Afor+%28i%3D1%3B+i+%3C+e.length%3B+i%2B%2B%29+%0D%0A%7B%0D%0A%09tEmp%3De%5Bi%5D%5B%22_fields%22%5D%5B%22Employee%22%5D%3B%0D%0A%09vEmployeeDict%5BtEmp%5D%3D%7B%7D%3B%0D%0A%09if+%28e%5Bi%5D%5B%22_fields%22%5D%5B%22TerminationDate%22%5D+%3D%3D+%2200000000%22%29%0D%0A%09%7Be%5Bi%5D%5B%22_fields%22%5D%5B%22TerminationDate%22%5D%3D%22%22%7D+%0D%0A%09buildWebDict%28vEmployeeDict%2CtEmp%29%3B%0D%0A%7D]]></anyData>
             </prop>
             <prop className="Object" name="" propType="SIMPLE">
-                <anyData><![CDATA[processlog.info%28eWA_result%29%3B]]></anyData>
-            </prop>
-            <prop className="Object" name="" propType="SIMPLE">
-                <anyData><![CDATA[JSON.stringify%28vEmployeeDict%29]]></anyData>
+                <anyData><![CDATA[JSON.stringify%28vEmployeeDict%29%3B]]></anyData>
             </prop>
             <OnActivityError>
                 <notify>false</notify>
@@ -322,7 +319,7 @@
                 <anyData><![CDATA[false]]></anyData>
             </prop>
             <prop className="Object" name="" propType="SIMPLE">
-                <anyData><![CDATA[for+%28tEmp+in+vEmployeeDict%29%0D%0A%7B%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22BAMFEINBYCUSTID%22%5D+%2B+vDelimiter%29%3B+%2F%2FWOTC+CustID%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22LegalEntity.LegalEntityNumber%22%5D+%2B+vDelimiter%29%3B+%2F%2FFEIN%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22LegalEntity.Description%22%5D+%2B+vDelimiter%29%3B+%2F%2FCompanyName%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22Location%22%5D+%2B+vDelimiter%29%3B+%2F%2FLocation+Code%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22Location.Description%22%5D+%2B+vDelimiter%29%3B+%2F%2FLocation+Name%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22IdentificationNumber%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+Social%0D%0A%09%09vOutput.push%28tEmp+%2B+vDelimiter%29%3B+%2F%2FEmployee+ID%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22Employee.Name.FamilyName%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+Last+Name%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22Employee.Name.GivenName%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+First+Name%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22Employee.Name.MiddleInitial%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+Middle+Initial%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22Employee.MailingAddressLine1%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+Address%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22Employee.MailingAddressLine2%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+Address+2%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22Employee.MailingMunicipality%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+City%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22Employee.MailingStateProvince%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+State%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22Employee.MailingPostalCode%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+Zip%0D%0A%09%09%0D%0A%7D]]></anyData>
+                <anyData><![CDATA[for+%28tEmp+in+vEmployeeDict%29%0D%0A%7B%0D%0A%09%09vOutput.push%28%22300%22+%2B+vDelimiter%29%3B+%2F%2FTransaction+Type+%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22Name.GivenName%22%5D+%2B+vDelimiter%29%3B+%2F%2FFirst+Name+%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22Name.MiddleInitial%22%5D+%2B+vDelimiter%29%3B+%2F%2FMiddle+Initial%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22Name.FamilyName%22%5D+%2B+vDelimiter%29%3B+%2F%2FLast+Name%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22Employee%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+ID%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22BAMLoginID%22%5D+%2B+vDelimiter%29%3B+%2F%2FLogin+ID%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FPassword+Blank%09%09%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22EmployeeContact.ContactDetail.EmailAddress%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee+Email%0D%0A%09%09vOutput.push%28%22en_US%22+%2B+vDelimiter%29%3B+%2F%2FLocale+Code%0D%0A%09%09vOutput.push%28%22US%22+%2B+vDelimiter%29%3B+%2F%2FCountry+Code%09%09%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCountry+Sub+Code%09%09%09%09%0D%0A%09%09vOutput.push%28%22LAWSON%22+%2B+vDelimiter%29%3B+%2F%2FLedger+Code%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22PrimaryWorkAssignment.PayRateCurrency%22%5D+%2B+vDelimiter%29%3B+%2F%2FReimburse+Currency%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCashAdvAcctCode+Blank%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22BAMRelationshipStatus%22%5D+%2B+vDelimiter%29%3B+%2F%2FActive++++++++++++%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22PrimaryWorkAssignment.ExpenseAccount.ToAccountingEntity%22%5D+%2B+vDelimiter%29%3B+%2F%2FOrg+Unit+%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22PrimaryWorkAssignment.Location%22%5D+%2B+vDelimiter%29%3B+%2F%2FOrg+Unit+2%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FOrg+Unit+3%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FOrg+Unit+4%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FOrg+Unit+5%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FOrg+Unit+6%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22BAMWeekEndDate%22%5D+%2B+vDelimiter%29%3B+%2F%2FCustom+1+%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+2%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+3%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+4%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+5%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+6%09%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+7%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+8%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+9%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+10%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+11%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+12%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+13%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+14%09%09%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+15%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+16%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+17%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+18%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+19+%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCustom+20%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22PrimaryWorkAssignment.BAMStoreOrMain%22%5D+%2B+vDelimiter%29%3B+%2F%2FStore+Employee%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FE-mail+Cash+Adv+Sts+%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FE-mail+Cash+Adv+App%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FE-mail+Report+Status%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FE-mail+Report+App+++%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FPrompt+App+Report++%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FE-mail+Trv+Req+Sts++%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FE-mail+Trv+Req+App%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FPrompt+App+for+Trv%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FE-mail+Payment+Sts%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FE-mail+Payment+App%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FPrompt+App+for+Pymt%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FPrompt+Card+Trans++%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FE-mail+Card+Trans%09%09%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FE-mail+Rcpt+Fax+Rcpt+%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FDsp+Help+on+Pages+%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FDsp+Image+Intro+Page%09%09%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22DirectSupervisorEmployee%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee%27s+Supervisor++Emp+ID%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FEmp+Id+Cash+Adv+App+%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FEmp+Id+Trav+Req+App%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FEmp+Id+Payment+App%09%0D%0A%09%09vOutput.push%28%22Y%22+%2B+vDelimiter%29%3B+%2F%2FTraveler%09%09%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22BAMIsManagerCamelCase%22%5D+%2B+vDelimiter%29%3B+%2F%2FApprover%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FCompany+Card+Admin%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FIntegration+Admin%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FReceipt+Processor+%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FAuth+Req+App++%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FInteg+Admin+Restrict%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FDesktop+Admin+++%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FOffline+User++%09%09%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FReport+Config+Admin++%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FPayment+User+%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FPayment+Approver+%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FPayment+Vendor+Mgr%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FExpense+Audit+Req+%0D%0A%09%09vOutput.push%28vEmployeeDict%5BtEmp%5D%5B%22DirectSupervisorEmployee%22%5D+%2B+vDelimiter%29%3B+%2F%2FEmployee%27s+Supervisor++Emp+ID%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FFuture+Use+2%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FFuture+Use+3%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FFuture+Use+4%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FFuture+Use+5%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FInvoice+User%0D%0A%09%09vOutput.push%28%22Y%22+%2B+vDelimiter%29%3B+%2F%2FTravel+and+Exp+User%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FTax+Administrator%0D%0A%09%09vOutput.push%28%22+%22+%2B+vDelimiter%29%3B+%2F%2FFbt+Administrator+%0D%0A%09%09vOutput.push%28%22Y%22+%2B+vDelimiter%29%3B+%2F%2FCliqbook+User%0D%0A%09%09%0D%0A%7D]]></anyData>
             </prop>
             <OnActivityError>
                 <notify>false</notify>
@@ -339,7 +336,7 @@
                 <emailCon/>
             </OnActivityError>
         </activity>
-        <activity activityType="ACCFIL" caption="WriteFile" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaFileAccess" id="WriteFile" x="523" y="185">
+        <activity activityType="ACCFIL" caption="WriteFile" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaFileAccess" id="WriteFile" x="530" y="200">
             <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
                 <anyData/>
             </prop>
@@ -353,7 +350,7 @@
                 <anyData><![CDATA[windows-1252]]></anyData>
             </prop>
             <prop className="java.lang.String" name="dataSource" propType="SIMPLE">
-                <anyData><![CDATA[%3C%21vOutput.join%28%22%22%29%3E]]></anyData>
+                <anyData><![CDATA[Transaction+Type%7CFirst+Name%7CMiddle+Name%7CLast+Name%7CEmployee+Id%7CLogin+Id%7CPassword%7CE-mail+Address%7CLocale+Code%7CCountry+Code%7CCountry+Sub+Code%7CLedger+Code%7CReimburse+Currency%7CCash+Adv+Acct+Code%7CActive%7COrg+Unit+1%7COrg+Unit+2%7COrg+Unit+3%7COrg+Unit+4%7COrg+Unit+5%7COrg+Unit+6%7CCustom+1%7CCustom+2%7CCustom+3%7CCustom+4%7CCustom+5%7CCustom+6%7CCustom+7%7CCustom+8%7CCustom+9%7CCustom+10%7CCustom+11%7CCustom+12%7CCustom+13%7CCustom+14%7CCustom+15%7CCustom+16%7CCustom+17%7CCustom+18%7CCustom+19%7CCustom+20%7CStore_Employee+%28Was+Cust21%29%7CE-mail+Cash+Adv+Sts%7CE-mail+Cash+Adv+App%7CE-mail+Report+Status%7CE-mail+Report+App%7CPrompt+App+Report%7CE-mail+Trv+Req+Sts%7CE-mail+Trv+Req+App%7CPrompt+App+for+Trv%7CE-mail+Payment+Sts%7CE-mail+Payment+App%7CPrompt+App+for+Pymt%7CPrompt+Card+Trans%7CE-mail+Card+Trans%7CE-mail+Rcpt+Fax+Rcpt%7CDsp+Help+on+Pages%7CDsp+Image+Intro+Page%7CEmp+Id+Report+App%7CEmp+Id+Cash+Adv+App%7CEmp+Id+Trav+Req+App%7CEmp+Id+Payment+App%7CTraveler%7CApprover%7CCompany+Card+Admin%7CIntegration+Admin%7CReceipt+Processor%7CAuth+Req+App%7CInteg+Admin+Restrict%7CDesktop+Admin%7COffline+User%7CReport+Config+Admin%7CPayment+User%7CPayment+Approver%7CPayment+Vendor+Mgr%7CExpense+Audit+Req%7CBi+Manager+Emp+Id%7CFuture+Use+2%7CFuture+Use+3%7CFuture+Use+4%7CFuture+Use+5%7CInvoice+User%7CTravel+and+Exp+User%7CTax+Administrator%7CFbt+Administrator%7CCliqbook+User%0D%0A%3C%21vOutput.join%28%22%22%29%3E]]></anyData>
             </prop>
             <prop className="java.lang.String" name="filePathName" propType="SIMPLE">
                 <anyData><![CDATA[BAM_%3C%21vEnvironment%3EConcur_%3C%21vCurrentTime%3E.csv]]></anyData>
@@ -393,13 +390,13 @@
                 <anyData/>
             </prop>
             <prop className="java.lang.String" name="targetConfigurationName" propType="SIMPLE">
-                <anyData><![CDATA[BAM_Thomas_And_Co]]></anyData>
+                <anyData><![CDATA[BAM_Concur]]></anyData>
             </prop>
             <prop className="java.lang.String" name="SourceFile" propType="SIMPLE">
-                <anyData><![CDATA[BAM_%3C%21vEnvironment%3EEMP_%3C%21vCurrentTime%3E.csv]]></anyData>
+                <anyData><![CDATA[BAM_%3C%21vEnvironment%3EConcur_%3C%21vCurrentTime%3E.csv]]></anyData>
             </prop>
             <prop className="java.lang.String" name="TargetFile" propType="SIMPLE">
-                <anyData><![CDATA[%3C%21_configuration.BAM_Thomas_And_Co.FTPDirectory%3EBAM_%3C%21vEnvironment%3EEMP_%3C%21vCurrentTime%3E.csv]]></anyData>
+                <anyData><![CDATA[%3C%21_configuration.BAM_Concur.FTPDirectory%3EBAM_%3C%21vEnvironment%3EConcur_%3C%21vCurrentTime%3E.csv]]></anyData>
             </prop>
             <prop className="java.lang.Boolean" name="stopOnError" propType="SIMPLE">
                 <anyData><![CDATA[false]]></anyData>
@@ -434,16 +431,90 @@
                 <emailCon/>
             </OnActivityError>
         </activity>
+        <activity activityType="LM" caption="LMTxn" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaLandmark" id="LMTxn3210" x="152" y="366">
+            <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.Boolean" name="Checkpoint" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="conversionStatus" propType="SIMPLE">
+                <anyData><![CDATA[0]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="configurationName" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.String" name="transactionString" propType="SIMPLE">
+                <anyData><![CDATA[_dataArea%3D%22%3C%21appProdline%3E%22+%26+_module%3D%22hr%22+%26+_objectName%3D%22EmployeeContact%22+%26+_actionName%3D%22Find%22+%26+_actionOperator%3D%22NONE%22+%26+_actionType%3D%22SingleRecordQuery%22+%26+_runAsUser%3D%22%22+%26+_runAsRole%3D%22%22+%26+_authenticatedUser%3D%22%22+%26+_pageSize%3D%2230%22+%26+_relationName%3D%22%22+%26+_setName%3D%22%22+%26+_asOfDate%3D%22%22+%26+_effectiveDate%3D%22%22+%26+HROrganization%3D%221%22+%26+Employee%3D%22159990%22+%26+ContactDetail.EmailAddress%3D%22wtmangum%40protonmail.ch%22]]></anyData>
+            </prop>
+            <prop className="java.lang.Boolean" name="stopProcessOnActivityError" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="java.lang.Boolean" name="enforceEscape" propType="SIMPLE">
+                <anyData><![CDATA[true]]></anyData>
+            </prop>
+            <prop className="java.lang.Boolean" name="autoEscapeVariables" propType="SIMPLE">
+                <anyData><![CDATA[true]]></anyData>
+            </prop>
+            <prop className="java.lang.Integer" name="dataViewsOption" propType="SIMPLE">
+                <anyData><![CDATA[0]]></anyData>
+            </prop>
+            <prop className="java.lang.Integer" name="webServiceMode" propType="SIMPLE">
+                <anyData><![CDATA[true]]></anyData>
+            </prop>
+            <OnActivityError>
+                <notify>false</notify>
+                <to/>
+                <cc/>
+                <bcc/>
+                <from/>
+                <subject/>
+                <body/>
+                <goto>false</goto>
+                <activity/>
+                <log>false</log>
+                <logString/>
+                <emailCon/>
+            </OnActivityError>
+        </activity>
+        <activity activityType="ItEnd" caption="End-LMTxn" className="com.lawson.bpm.processflow.workFlow.flowGraph.FgaIterEnd" id="End-LMTxn3210" x="302" y="366">
+            <prop className="java.lang.String" name="_activityCheckPoint" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <prop className="java.lang.Boolean" name="Checkpoint" propType="SIMPLE">
+                <anyData><![CDATA[false]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="breakCondition" propType="SIMPLE">
+                <anyData><![CDATA[2]]></anyData>
+            </prop>
+            <prop className="java.lang.String" name="breakConditionText" propType="SIMPLE">
+                <anyData/>
+            </prop>
+            <OnActivityError>
+                <notify>false</notify>
+                <to/>
+                <cc/>
+                <bcc/>
+                <from/>
+                <subject/>
+                <body/>
+                <goto>false</goto>
+                <activity/>
+                <log>false</log>
+                <logString/>
+                <emailCon/>
+            </OnActivityError>
+        </activity>
     </activities>
     <edges>
         <edge edgeType="NORMAL" from="Start" id="0" to="Assign2130"/>
-        <edge edgeType="NORMAL" from="eGroup" id="1" to="Assign7500"/>
-        <edge edgeType="NORMAL" from="eWA" id="2" to="Assign3700"/>
-        <edge edgeType="NORMAL" from="Assign5550" id="3" to="WriteFile"/>
-        <edge edgeType="NORMAL" from="FTP" id="4" to="End"/>
-        <edge edgeType="NORMAL" from="WriteFile" id="5" to="FTP"/>
+        <edge edgeType="NORMAL" from="Emp" id="1" to="Assign3700"/>
+        <edge edgeType="NORMAL" from="Assign5550" id="2" to="WriteFile"/>
+        <edge edgeType="NORMAL" from="FTP" id="3" to="End"/>
+        <edge edgeType="NORMAL" from="WriteFile" id="4" to="FTP"/>
+        <edge edgeType="NORMAL" from="Assign3700" id="5" to="Assign5550"/>
         <edge edgeType="NORMAL" from="Assign2130" id="6" to="eGroup"/>
-        <edge edgeType="NORMAL" from="Assign7500" id="7" to="eWA"/>
-        <edge edgeType="NORMAL" from="Assign3700" id="8" to="Assign5550"/>
+        <edge edgeType="NORMAL" from="eGroup" id="7" to="Assign7500"/>
+        <edge edgeType="NORMAL" from="Assign7500" id="8" to="Emp"/>
     </edges>
 </process>

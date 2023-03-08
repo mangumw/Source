@@ -1,0 +1,86 @@
+		vOutput.push("300" + vDelimiter); //Transaction Type 
+		vOutput.push(vEmployeeDict[tEmp]["Employee.Name.GivenName"] + vDelimiter); //First Name 
+		vOutput.push(vEmployeeDict[tEmp]["Employee.Name.MiddleInitial"] + vDelimiter); //Middle Initial
+		vOutput.push(vEmployeeDict[tEmp]["Employee.Name.FamilyName"] + vDelimiter); //Last Name
+		vOutput.push(vEmployeeDict[tEmp]["Employee.Employee"] + vDelimiter); //Employee ID
+		vOutput.push(vEmployeeDict[tEmp]["Employee.BAMLoginID"] + vDelimiter); //Login ID
+		vOutput.push("" + vDelimiter); //Password Blank		
+		vOutput.push(vEmployeeDict[tEmp]["Employee.EmployeeWorkEmailAddress"] + vDelimiter); //Employee Email
+		vOutput.push("en_US" + vDelimiter); //Locale Code
+		vOutput.push("US" + vDelimiter); //Country Code		
+		vOutput.push("" + vDelimiter); //Country Sub Code				
+		vOutput.push("LAWSON" + vDelimiter); //Ledger Code
+		vOutput.push(vEmployeeDict[tEmp]["PayRateCurrency"] + vDelimiter); //Reimburse Currency
+		vOutput.push("" + vDelimiter); //CashAdvAcctCode Blank
+		vOutput.push(vEmployeeDict[tEmp]["BAMRelationshipStatus"] + vDelimiter); //Active            
+		vOutput.push(vEmployeeDict[tEmp]["ExpenseAccount.ToAccountingEntity"] + vDelimiter); //Org Unit 
+		vOutput.push(vEmployeeDict[tEmp]["Location"] + vDelimiter); //Org Unit 2
+		vOutput.push("" + vDelimiter); //Org Unit 3
+		vOutput.push("" + vDelimiter); //Org Unit 4
+		vOutput.push("" + vDelimiter); //Org Unit 5
+		vOutput.push("" + vDelimiter); //Org Unit 6
+		vOutput.push(vEmployeeDict[tEmp]["Employee.BAMWeekEndDate"] + vDelimiter); //Custom 1 
+		vOutput.push("" + vDelimiter); //Custom 2
+		vOutput.push("" + vDelimiter); //Custom 3
+		vOutput.push("" + vDelimiter); //Custom 4
+		vOutput.push("" + vDelimiter); //Custom 5
+		vOutput.push("" + vDelimiter); //Custom 6	
+		vOutput.push("" + vDelimiter); //Custom 7
+		vOutput.push("" + vDelimiter); //Custom 8
+		vOutput.push("" + vDelimiter); //Custom 9
+		vOutput.push("" + vDelimiter); //Custom 10
+		vOutput.push("" + vDelimiter); //Custom 11
+		vOutput.push("" + vDelimiter); //Custom 12
+		vOutput.push("" + vDelimiter); //Custom 13
+		vOutput.push("" + vDelimiter); //Custom 14		
+		vOutput.push("" + vDelimiter); //Custom 15
+		vOutput.push("" + vDelimiter); //Custom 16
+		vOutput.push("" + vDelimiter); //Custom 17
+		vOutput.push("" + vDelimiter); //Custom 18
+		vOutput.push("" + vDelimiter); //Custom 19 
+		vOutput.push("" + vDelimiter); //Custom 20
+		vOutput.push(vEmployeeDict[tEmp]["BAMStoreOrMain"] + vDelimiter); //Store Employee
+		vOutput.push("" + vDelimiter); //E-mail Cash Adv Sts 
+		vOutput.push("" + vDelimiter); //E-mail Cash Adv App
+		vOutput.push("" + vDelimiter); //E-mail Report Status
+		vOutput.push("" + vDelimiter); //E-mail Report App   
+		vOutput.push("" + vDelimiter); //Prompt App Report  
+		vOutput.push("" + vDelimiter); //E-mail Trv Req Sts  
+		vOutput.push("" + vDelimiter); //E-mail Trv Req App
+		vOutput.push("" + vDelimiter); //Prompt App for Trv
+		vOutput.push("" + vDelimiter); //E-mail Payment Sts
+		vOutput.push("" + vDelimiter); //E-mail Payment App
+		vOutput.push("" + vDelimiter); //Prompt App for Pymt
+		vOutput.push("" + vDelimiter); //Prompt Card Trans  
+		vOutput.push("" + vDelimiter); //E-mail Card Trans		
+		vOutput.push("" + vDelimiter); //E-mail Rcpt Fax Rcpt 
+		vOutput.push("" + vDelimiter); //Dsp Help on Pages 
+		vOutput.push("" + vDelimiter); //Dsp Image Intro Page		
+		vOutput.push(vEmployeeDict[tEmp]["Employee.DirectSupervisorEmployee"] + vDelimiter); //Employee State
+		vOutput.push("" + vDelimiter); //Emp Id Cash Adv App 
+		vOutput.push("" + vDelimiter); //Emp Id Trav Req App
+		vOutput.push("" + vDelimiter); //Emp Id Payment App	
+		vOutput.push("Y" + vDelimiter); //Traveler		
+		vOutput.push(vEmployeeDict[tEmp]["Employee.BAMIsManagerCamelCase"] + vDelimiter); //Approver
+		vOutput.push("" + vDelimiter); //Company Card Admin
+		vOutput.push("" + vDelimiter); //Integration Admin
+		vOutput.push("" + vDelimiter); //Receipt Processor 
+		vOutput.push("" + vDelimiter); //Auth Req App  
+		vOutput.push("" + vDelimiter); //Integ Admin Restrict
+		vOutput.push("" + vDelimiter); //Desktop Admin   
+		vOutput.push("" + vDelimiter); //Offline User  		
+		vOutput.push("" + vDelimiter); //Report Config Admin  
+		vOutput.push("" + vDelimiter); //Payment User 
+		vOutput.push("" + vDelimiter); //Payment Approver 
+		vOutput.push("" + vDelimiter); //Payment Vendor Mgr
+		vOutput.push("" + vDelimiter); //Expense Audit Req 
+		vOutput.push(vEmployeeDict[tEmp]["Employee.DirectSupervisorEmployee"] + vDelimiter); //Employee State
+		vOutput.push("" + vDelimiter); //Future Use 2
+		vOutput.push("" + vDelimiter); //Future Use 3
+		vOutput.push("" + vDelimiter); //Future Use 4
+		vOutput.push("" + vDelimiter); //Future Use 5
+		vOutput.push("" + vDelimiter); //Invoice User
+		vOutput.push("Y" + vDelimiter); //Travel and Exp User
+		vOutput.push("" + vDelimiter); //Tax Administrator
+		vOutput.push("" + vDelimiter); //Fbt Administrator 
+		vOutput.push("Y" + vDelimiter); //Cliqbook User
